@@ -1,0 +1,76 @@
+{
+  "deliveries": [
+    {
+      "id": "D1",
+      "name": "Customer Alpha",
+      "location": "B",
+      "timeWindow": {
+        "start": 10,
+        "end": 14
+      },
+      "priority": "High",
+      "load": 20,
+      "profit": 50
+    },
+    {
+      "id": "D2",
+      "name": "Customer Beta",
+      "location": "D",
+      "timeWindow": {
+        "start": 14,
+        "end": 18
+      },
+      "priority": "Normal",
+      "load": 15,
+      "profit": 35
+    },
+    {
+      "id": "D3",
+      "name": "Customer Gamma",
+      "location": "E",
+      "timeWindow": {
+        "start": 9,
+        "end": 12
+      },
+      "priority": "Low",
+      "load": 25,
+      "profit": 40
+    },
+    {
+      "id": "D4",
+      "name": "Customer Delta",
+      "location": "H",
+      "timeWindow": {
+        "start": 11,
+        "end": 16
+      },
+      "priority": "High",
+      "load": 18,
+      "profit": 45
+    },
+    {
+      "id": "D5",
+      "name": "Customer Epsilon",
+      "location": "J",
+      "timeWindow": {
+        "start": 13,
+        "end": 17
+      },
+      "priority": "Normal",
+      "load": 22,
+      "profit": 38
+    },
+    {
+      "id": "D6",
+      "name": "Customer Zeta",
+      "location": "L",
+      "timeWindow": {
+        "start": 8,
+        "end": 11
+      },
+      "priority": "Low",
+      "load": 30,
+      "profit": 42
+    }
+  ]
+}

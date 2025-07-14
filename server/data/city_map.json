@@ -1,0 +1,90 @@
+{
+  "locations": [
+    {
+      "id": "A",
+      "name": "Main Warehouse",
+      "coordinates": { "x": 0, "y": 0 },
+      "type": "warehouse"
+    },
+    {
+      "id": "B",
+      "name": "Distribution Center North",
+      "coordinates": { "x": 1, "y": 0 },
+      "type": "hub"
+    },
+    {
+      "id": "C",
+      "name": "Service Point Central",
+      "coordinates": { "x": 2, "y": 0 },
+      "type": "hub"
+    },
+    {
+      "id": "D",
+      "name": "Customer Zone East",
+      "coordinates": { "x": 3, "y": 0 },
+      "type": "delivery"
+    },
+    {
+      "id": "E",
+      "name": "Customer Zone Northeast",
+      "coordinates": { "x": 4, "y": 0 },
+      "type": "delivery"
+    },
+    {
+      "id": "F",
+      "name": "Service Point North",
+      "coordinates": { "x": 5, "y": 0 },
+      "type": "hub"
+    },
+    {
+      "id": "G",
+      "name": "Hub South",
+      "coordinates": { "x": 0, "y": 1 },
+      "type": "hub"
+    },
+    {
+      "id": "H",
+      "name": "Customer Zone South",
+      "coordinates": { "x": 1, "y": 1 },
+      "type": "delivery"
+    },
+    {
+      "id": "I",
+      "name": "Distribution Center South",
+      "coordinates": { "x": 2, "y": 1 },
+      "type": "hub"
+    },
+    {
+      "id": "J",
+      "name": "Customer Zone Southeast",
+      "coordinates": { "x": 3, "y": 1 },
+      "type": "delivery"
+    },
+    {
+      "id": "K",
+      "name": "Service Point East",
+      "coordinates": { "x": 4, "y": 1 },
+      "type": "hub"
+    },
+    {
+      "id": "L",
+      "name": "Customer Zone Far East",
+      "coordinates": { "x": 5, "y": 1 },
+      "type": "delivery"
+    }
+  ],
+  "graph": {
+    "A": { "B": 45, "G": 38 },
+    "B": { "A": 45, "C": 32, "H": 28 },
+    "C": { "B": 32, "D": 41, "I": 35 },
+    "D": { "C": 41, "E": 29, "J": 33 },
+    "E": { "D": 29, "F": 36, "K": 42 },
+    "F": { "E": 36, "L": 31 },
+    "G": { "A": 38, "H": 26 },
+    "H": { "G": 26, "B": 28, "I": 37 },
+    "I": { "H": 37, "C": 35, "J": 39 },
+    "J": { "I": 39, "D": 33, "K": 34 },
+    "K": { "J": 34, "E": 42, "L": 43 },
+    "L": { "K": 43, "F": 31 }
+  }
+}
