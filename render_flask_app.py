@@ -24,7 +24,7 @@ from server.algorithms.scheduler import adaptive_scheduler
 from server.database import db_manager
 
 app = Flask(__name__)
-CORS(app, origins=[
+CORS(app,supports_credentials=True, origins=[
     "https://optiroute-frontend.vercel.app",
     "https://optiroute-frontend-*.vercel.app",
     "http://localhost:3000",
