@@ -350,6 +350,24 @@ def get_route_history():
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 
+
+@app.route('/api/deliveries', methods=['POST'])
+def add_delivery():
+    """Add a single delivery entry (used by frontend Add Delivery form)"""
+    try:
+        delivery = request.get_json()
+        if not delivery:
+            return jsonify({'error': 'Invalid delivery data'}), 400
+
+        success = db_manager.save_delivery(delivery)
+        if success:
+            return jsonify({'message': 'Delivery saved successfully'}), 201
+        else:
+            return jsonify({'error': 'Failed to save delivery'}), 500
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
+
 @app.route('/health', methods=['GET'])
 def health_check():
     """Health check endpoint"""
