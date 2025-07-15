@@ -3,8 +3,16 @@ import { registerRoutes } from "./routes";
 import { setupVite, serveStatic, log } from "./vite";
 
 const app = express();
+
+app.use(cors({
+  origin: "https://optiroute-frontend.vercel.app", // your Vercel frontend
+  credentials: true
+}));
+
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+
 
 app.use((req, res, next) => {
   const start = Date.now();
