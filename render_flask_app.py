@@ -24,7 +24,12 @@ from server.algorithms.scheduler import adaptive_scheduler
 from server.database import db_manager
 
 app = Flask(__name__)
-CORS(app, origins=["https://optiroute-frontend.vercel.app", "http://localhost:3000"])
+CORS(app, origins=[
+    "https://optiroute-frontend.vercel.app",
+    "https://optiroute-frontend-*.vercel.app",
+    "http://localhost:3000",
+    "http://localhost:5173"
+])
 
 def create_coordinates_dict(locations: List[Dict]) -> Dict[str, tuple]:
     """Convert locations to coordinates dictionary for A* algorithm."""
