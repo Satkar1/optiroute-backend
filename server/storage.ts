@@ -69,6 +69,18 @@ export class MemStorage implements IStorage {
     const id = `D${Date.now()}`;
     const delivery: Delivery = { ...insertDelivery, id };
     this.deliveries.set(id, delivery);
+    // Persist to deliveries.json
+    try {
+      const deliveriesPath = path.join(process.cwd(), 'server/data/deliveries.json');
+      let deliveriesData = { deliveries: [] };
+      if (fs.existsSync(deliveriesPath)) {
+        deliveriesData = JSON.parse(fs.readFileSync(deliveriesPath, 'utf-8'));
+      }
+      deliveriesData.deliveries.push(delivery);
+      fs.writeFileSync(deliveriesPath, JSON.stringify(deliveriesData, null, 2));
+    } catch (error) {
+      console.error('Error saving delivery to file:', error);
+    }
     return delivery;
   }
 
